@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu__wars{
+ text-align: center;
+ margin: 30px 0 20px 0;   
+}
+
+.menu__wars span{
+    margin: 10px 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+
+.personas__wars{
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 100px;
+
+    
+    
+    width: 30%;
+    margin: 0 auto;
+}
+
+.nave{
+    color: blue;
+}
+
+.jedi{
+    color: chartreuse;
+}
+.piloto{
+    color: cornflowerblue;
+}
