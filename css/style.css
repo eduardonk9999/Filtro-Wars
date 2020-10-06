@@ -20,13 +20,11 @@
 .personas__wars{
     display: flex;
     justify-content: space-between;
-
     padding-top: 100px;
-
-    
-    
-    width: 30%;
+    /* width: 30%; */
     margin: 0 auto;
+    flex-wrap: wrap;
+    max-width: 900px;
 }
 
 .nave{
@@ -38,4 +36,15 @@
 }
 .piloto{
     color: cornflowerblue;
+}
+
+.elemtento{
+    margin: 10px 10px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
 }

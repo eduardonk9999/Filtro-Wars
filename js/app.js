@@ -13,5 +13,19 @@ elementosBtns.forEach((elementoBtn) => {
 
 
 function filtro(){
-    console.log('item');
+    console.log(this.dataset);
+
+
+    let itensStarWars = document.querySelectorAll(".personas__wars div");
+    itensStarWars = Array.from(itensStarWars);
+    
+    const mapItens = itensStarWars.map((item) => {
+        return item.dataset;
+    })
+    
+    const jedi = ({ filter }) => filter === 'jedi'
+
+    console.log(mapItens.filter(jedi))
+    
+    
 }
