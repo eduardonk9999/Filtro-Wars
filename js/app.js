@@ -4,7 +4,20 @@ const elementosBtns = document.querySelectorAll('.menu__wars span');
 
 elementosBtns.forEach((elementoBtn) => {
 
-    elementoBtn.addEventListener('click', filtro)
+    
+    elementoBtn.addEventListener('click', () => {
+        
+        
+        console.log(elementoBtn.dataset)
+        if('jedi' == elementoBtn.dataset.item){
+            console.log('Sou um Jedi')
+            filtro();
+        } else{
+            console.log('Não sou um jedi')
+        }
+
+        
+    })
 
 
 
@@ -13,7 +26,8 @@ elementosBtns.forEach((elementoBtn) => {
 
 
 function filtro(){
-    console.log(this.dataset);
+    
+    const elemento = document.querySelectorAll('.elemento');
 
 
     let itensStarWars = document.querySelectorAll(".personas__wars div");
@@ -23,9 +37,16 @@ function filtro(){
         return item.dataset;
     })
     
-    const jedi = ({ filter }) => filter === 'jedi'
+    const jedi = ({ filter }) => filter === 'jedi';
+    
+    const jedis = mapItens.filter(jedi);
+    
+    if(elemento.dataset === jedis){
+    
+    }
 
-    console.log(mapItens.filter(jedi))
+
+
     
     
 }
