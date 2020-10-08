@@ -1,22 +1,21 @@
+const elementsBtns = document.querySelectorAll('.menu__wars span');
+const elementsWars = [];
 
 
-const elementosBtns = document.querySelectorAll('.menu__wars span');
-
-elementosBtns.forEach((elementoBtn) => {
+elementsBtns.forEach((elementoBtn) => {
 
     
     elementoBtn.addEventListener('click', () => {
         
-        
-        console.log(elementoBtn.dataset)
-        if('jedi' == elementoBtn.dataset.item){
-            console.log('Sou um Jedi')
-            filtro();
-        } else{
-            console.log('Não sou um jedi')
-        }
+        InitListWars();
+        filtro();
 
-        
+        // if(elementoBtn.dataset.item === 'nave'){
+        //     console.log("sou uma nave");
+        // } else {
+        //     console.log("Não sou uma nave")
+        // }
+
     })
 
 
@@ -27,26 +26,32 @@ elementosBtns.forEach((elementoBtn) => {
 
 function filtro(){
     
-    const elemento = document.querySelectorAll('.elemento');
+    const mapWars = elementsWars.map( (el) => {
+        return el;
+    });
+
+    console.log(mapWars)
+     
 
 
-    let itensStarWars = document.querySelectorAll(".personas__wars div");
-    itensStarWars = Array.from(itensStarWars);
     
-    const mapItens = itensStarWars.map((item) => {
-        return item.dataset;
-    })
-    
-    const jedi = ({ filter }) => filter === 'jedi';
-    
-    const jedis = mapItens.filter(jedi);
-    
-    if(elemento.dataset === jedis){
-    
-    }
-
+   
 
 
     
     
+}
+
+
+// Cria Array de Objetos
+
+function InitListWars(el){
+
+    const elementsLists = document.querySelectorAll('.personas__wars div');
+
+    elementsLists.forEach( (element) => {
+        elementsWars.push(element.dataset.filter)
+    });
+    
+
 }
