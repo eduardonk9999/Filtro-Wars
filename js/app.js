@@ -7,8 +7,22 @@ const groupWars = [];
 // Button click
 
 function clickBtn() {
-    for(const btn of elementsBtns){
-        btn.addEventListener('click', filterElements)
+    for (const btn of elementsBtns) {
+
+
+
+        btn.addEventListener('click', () => {
+            if (btn.dataset.item === 'nave') {
+                console.log('nave')
+                
+                // Ver aula ori 0407
+
+
+                filterElements();
+            } else {
+                console.log('nao sou nave')
+            }
+        })
     }
 }
 
@@ -16,12 +30,20 @@ function clickBtn() {
 
 // Filter Elements
 
-function filterElements(){
+function filterElements() {
+    // const itensNave = groupWars.map((item) => {
+    //     return item;
+    // });
+
+    const itensNave = groupWars.filter((item) => {
+        console.log(item.name)
+        return item.name === 'nave';
+    })
+
+    console.log(itensNave);
     
-    console.log(groupWars)
-
-
 }
+
 
 
 
@@ -29,19 +51,20 @@ function filterElements(){
 
 function construcArray() {
     const listWars = document.querySelectorAll('.personas__wars div');
-    
+
     for (const warsElement of listWars) {
-        groupWars.push({"name": warsElement.dataset.filterwars})        
+        groupWars.push({ "name": warsElement.dataset.filterwars })
+        
     }
 }
 
 
 
 
-function initAll(){
+function initAll() {
     construcArray();
     clickBtn();
- 
+
 
 }
 
