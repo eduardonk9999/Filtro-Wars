@@ -1,57 +1,49 @@
 const elementsBtns = document.querySelectorAll('.menu__wars span');
-const elementsWars = [];
-
-
-elementsBtns.forEach((elementoBtn) => {
-
-    
-    elementoBtn.addEventListener('click', () => {
-        
-        InitListWars();
-        filtro();
-
-        // if(elementoBtn.dataset.item === 'nave'){
-        //     console.log("sou uma nave");
-        // } else {
-        //     console.log("Não sou uma nave")
-        // }
-
-    })
+const groupWars = [];
 
 
 
 
-})
+// Button click
 
-
-function filtro(){
-    
-    const mapWars = elementsWars.map( (el) => {
-        return el;
-    });
-
-    console.log(mapWars)
-     
-
-
-    
-   
-
-
-    
-    
+function clickBtn() {
+    for(const btn of elementsBtns){
+        btn.addEventListener('click', filterElements)
+    }
 }
 
 
-// Cria Array de Objetos
 
-function InitListWars(el){
+// Filter Elements
 
-    const elementsLists = document.querySelectorAll('.personas__wars div');
-
-    elementsLists.forEach( (element) => {
-        elementsWars.push(element.dataset.filter)
-    });
+function filterElements(){
     
+    console.log(groupWars)
+
 
 }
+
+
+
+// Constroi Array
+
+function construcArray() {
+    const listWars = document.querySelectorAll('.personas__wars div');
+    
+    for (const warsElement of listWars) {
+        groupWars.push({"name": warsElement.dataset.filterwars})        
+    }
+}
+
+
+
+
+function initAll(){
+    construcArray();
+    clickBtn();
+ 
+
+}
+
+initAll();
+
