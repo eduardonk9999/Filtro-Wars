@@ -12,23 +12,30 @@ function clickBtn() {
 
 
         btn.addEventListener('click', () => {
-            if (btn.dataset.item === 'nave') {
-                console.log('nave')
+            if (btn.dataset.item === 'nave' ) {
                 filterElements(btn.dataset.item);
             } else {
                 console.log('nao sou nave')
             }
             if (btn.dataset.item === 'jedi') {
-                console.log('jedi')
                 filterElements(btn.dataset.item);
             } else {
                 console.log('nao sou jedi')
             }
-            if (btn.dataset.item === 'piloto') {
-                console.log('piloto')
+            if (btn.dataset.item === 'pilot') {
                 filterElements(btn.dataset.item);
             } else {
-                console.log('nao sou piloto')
+                console.log('nao sou pilot')
+            }
+            if (btn.dataset.item === 'dark') {
+                filterElements(btn.dataset.item);
+            } else {
+                console.log('nao sou dark')
+            }
+            if (btn.dataset.item === 'droid') {
+                filterElements(btn.dataset.item);
+            } else {
+                console.log('nao sou droid')
             }
         })
     }
@@ -39,12 +46,8 @@ function clickBtn() {
 // Filter Elements
 
 function filterElements(par) {
-    
-
     const itensNave = groupWars.filter((item) => {
         if(item.name === `${par}`){
-            console.log(item.name);
-
             const divsUnico = document.querySelectorAll('.personas__wars div');
 
             for (const divUnico of divsUnico) {
@@ -53,20 +56,10 @@ function filterElements(par) {
                 }
                 else{
                     divUnico.classList.remove('active');
-                }
-                
-
-                
+                }   
             }
-            
         }
-        
     })
-
-    console.log(itensNave); // array vazio
-
-   
-    
 }
 
 

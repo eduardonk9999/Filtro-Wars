@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -9,6 +11,9 @@ body{
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+
+
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .menu__wars{
@@ -18,8 +23,16 @@ body{
 
 .menu__wars span{
     margin: 10px 10px;
-    padding: 10px;
+    padding: 20px;
     cursor: pointer;
+    font-size: 30px;
+    background: #fff;
+    border-radius: 7px;
+    text-align: center;
+    max-width: max-content;
+    width: 100%;
+    font-weight: 800;
+   
 }
 
 
@@ -35,23 +48,70 @@ body{
 }
 
 .nave{
-    color: blue;
+    color: #4f4ff5;
 }
 
 .jedi{
-    color: chartreuse;
+    color: #3f7509;
 }
 .piloto{
-    color: cornflowerblue;
+    color: #5793ff;
 }
 
 .elemtento{
-    margin: 10px 10px;
-    display: block;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 160px;
     background: #000;
-    color: #fff;
-    padding: 20px;
-    border-radius: 5px;
+    margin: 20px 30px;
+    border: 5px solid transparent;
+    
+}
+
+.elemtento img {
+    max-width: 100%;
+    width: 80px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    padding-top: 40px;
+}
+
+span.darkside {color: #ef1b1b;}
+
+span.droid {
+    color: #e96cea;
+}
+
+
+
+
+[data-filterwars="droid"].active {
+    display: block;
+    border: 5px solid #e96cea;
+    transform: scale(1.1);
+    transition: .3s all;
+}
+[data-filterwars="nave"].active {
+    display: block;
+    border: 5px solid #4f4ff5;
+    transform: scale(1.1);
+    transition: .3s all;
+}
+[data-filterwars="pilot"].active {
+    display: block;
+    border: 5px solid #5793ff;
+    transform: scale(1.1);
+    transition: .3s all;
+}
+[data-filterwars="jedi"].active {
+    display: block;
+    border: 5px solid #3f7509;
+    transform: scale(1.1);
+    transition: .3s all;
+}
+[data-filterwars="dark"].active {
+    display: block;
+    border: 5px solid #f50000;
+    transform: scale(1.1);
+    transition: .3s all;
 }
